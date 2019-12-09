@@ -1,0 +1,58 @@
+import re
+fname=input("enter the filename \n")
+fh=open(fname)
+#total=0
+lst=list()
+k=[]
+for line in fh :
+    line=line.rstrip()
+    data=re.findall('[0-9]+',line)
+    #print(data)
+    #print(type(data))
+    if len(data) <1:
+        continue
+    elif len(data)==1:
+        data1=int(data[0])
+        lst.append(data1)
+    elif len(data)==2:
+        data1=int(data[0])
+        data2=int(data[1])
+        lst.append(data1)
+        lst.append(data2)
+    else:
+        data1=int(data[0])
+        data2=int(data[1])
+        data3=int(data[2])
+        lst.append(data1)
+        lst.append(data2)
+        lst.append(data3)
+sum=sum(lst)
+print(len(lst))
+print(sum)
+
+        #print(lst)
+#num_sum=sum(lst)
+#print(len(num_sum))
+#print(num_sum)
+
+        #print(a)
+        #x=re.findall('^\'*$\'')
+
+        #print(x)
+
+#print(type(a))
+#print(a)
+    #re.sub(' +', ' ',lst)
+#print(str(m))
+#    b[i]=int(lst[i])
+#    print(a[i])
+
+
+#for ele in range(0, len(lst)):
+    #total = total + lst[ele]
+#print(total)
+
+
+#for x in ls:
+#    y=sum(x)
+#print(y)
